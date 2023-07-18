@@ -1,7 +1,7 @@
 //1. Usings to work with EntityFramework
 using Microsoft.EntityFrameworkCore;
 using UniversityAPI.DataAcces;
-
+using UniversityAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +17,10 @@ builder.Services.AddDbContext<UniversityContext>(options => options.UseSqlServer
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-//5.CORS configuration
+//5. Add Custom Services
+builder.Services.AddScoped<IStudentServices, StudentServices>();
+
+//6.CORS configuration
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "CorsPolicy", builder =>
@@ -43,6 +46,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//6. Tell app to use CORS
-//app.UseCors("CorsPolicy");
+//6.1. Tell app to use CORS
+app.UseCors("CorsPolicy");
 app.Run();
