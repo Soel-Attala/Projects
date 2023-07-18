@@ -1,4 +1,6 @@
-﻿namespace UniversityAPI.Models.DataModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace UniversityAPI.Models.DataModels
 {
     public class Category : BaseEntity
     {
