@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZCUCrrTU+k8SEpXs8xUkJqDbH33onnC3YPl5XgJt1/ihZEEl2aTgrM8tIzS4gflX+p/w7qUV0zAU87lo0ElThQ==",
+  "dgSpecHash": "whCRiNuq7YVv6QbzABHS3w8Rt6USkTJtTl6NIJoonwS4ig4kXYvCpd/MHnSWa3DAgsLHEoWEn1cobAbvkgFmQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Programación\\Projects\\UniversityAPI\\UniversityAPI.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Programación\\University-Backend\\UniversityAPI\\UniversityAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

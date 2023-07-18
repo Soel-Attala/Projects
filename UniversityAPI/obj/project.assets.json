@@ -11029,11 +11029,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Programación\\Projects\\UniversityAPI\\UniversityAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Programación\\University-Backend\\UniversityAPI\\UniversityAPI.csproj",
       "projectName": "UniversityAPI",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\Programación\\Projects\\UniversityAPI\\UniversityAPI.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\Programación\\University-Backend\\UniversityAPI\\UniversityAPI.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\Programación\\Projects\\UniversityAPI\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\Programación\\University-Backend\\UniversityAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
