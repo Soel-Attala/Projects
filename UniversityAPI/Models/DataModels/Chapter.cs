@@ -1,4 +1,6 @@
-﻿namespace UniversityAPI.Models.DataModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace UniversityAPI.Models.DataModels
 {
     public class Chapter : BaseEntity
     {
@@ -10,4 +12,4 @@
         public virtual Course Course { get; set; } = new Course();
     }
 }
-}
+
