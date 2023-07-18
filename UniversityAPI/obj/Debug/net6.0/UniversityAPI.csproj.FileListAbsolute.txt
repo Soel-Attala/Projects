@@ -498,3 +498,4 @@ C:\Users\Usuario\Desktop\Programación\University-Backend\UniversityAPI\obj\Debu
 C:\Users\Usuario\Desktop\Programación\University-Backend\UniversityAPI\obj\Debug\net6.0\UniversityAPI.pdb
 C:\Users\Usuario\Desktop\Programación\University-Backend\UniversityAPI\obj\Debug\net6.0\UniversityAPI.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\Programación\University-Backend\UniversityAPI\obj\Debug\net6.0\ref\UniversityAPI.dll
+C:\Users\Usuario\Desktop\Programación\University-Backend\UniversityAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
