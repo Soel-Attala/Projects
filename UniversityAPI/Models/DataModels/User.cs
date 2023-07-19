@@ -15,5 +15,7 @@ namespace UniversityAPI.Models.DataModels
 
         [Required]
         public ICollection<Student> Students { get; set; } = new List<Student>();
+
+
     }
 }
