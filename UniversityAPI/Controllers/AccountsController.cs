@@ -6,6 +6,7 @@ using UniversityAPI.DataAcces;
 using UniversityAPI.Helpers;
 using UniversityAPI.Models.DataModels;
 
+
 namespace UniversityAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
@@ -21,27 +22,6 @@ namespace UniversityAPI.Controllers
             _context = context;
         }
 
-        //TODO: Change by real users in DB
-        private IEnumerable<User> Logins = new List<User>()
-        {
-            new User()
-            {
-                Id = 1,
-                Name = "Admin",
-                Email = "testuser@gmail.com",
-                Password = "Admin",
-            },
-
-
-        new User()
-        {
-            Id = 2,
-                Name = "User1",
-                Email = "alfajorjorgito@gmail.com",
-                Password = "alfajorJorgito",
-            }
-    };
-
         [HttpPost]
         public IActionResult GetToken(UserLogins userLogins)
         {
@@ -49,16 +29,24 @@ namespace UniversityAPI.Controllers
             {
 
                 var Token = new UserToken();
-                var Valid = Logins.Any(user => user.Name.Equals(userLogins.UserName, StringComparison.OrdinalIgnoreCase));
 
-                if (Valid)
+                var searchUser = (from user in _context.Users
+                                  where user.Name == userLogins.UserName && user.Password == userLogins.Password
+                                  select user).FirstOrDefault();
+
+                Console.WriteLine("User Found: ", searchUser);
+
+
+                //var Valid = Logins.Any(user => user.Name.Equals(userLogins.UserName, StringComparison.OrdinalIgnoreCase));
+
+                if (searchUser != null)
                 {
-                    var user = Logins.FirstOrDefault(user => user.Name.Equals(userLogins.UserName, StringComparison.OrdinalIgnoreCase));
+                    //var user = Logins.FirstOrDefault(user => user.Name.Equals(userLogins.UserName, StringComparison.OrdinalIgnoreCase));
                     Token = JwtHelpers.GenTokenKey(new UserToken()
                     {
-                        UserName = user.Name,
-                        EmailId = user.Email,
-                        Id = user.Id,
+                        UserName = searchUser.Name,
+                        EmailId = searchUser.Email,
+                        Id = searchUser.Id,
                         GuId = Guid.NewGuid(),
                     }, _jwtSettings);
                 }
@@ -81,7 +69,7 @@ namespace UniversityAPI.Controllers
 
         public ActionResult GetUserList()
         {
-            return Ok(Logins);
+            return Ok(_context.Users);
         }
     }
 }
